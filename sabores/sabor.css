@@ -169,6 +169,7 @@ h1 em { display: block; font-style: italic; color: var(--accent); }
 /* Responsivo */
 @media (max-width: 991px) {
   .hero { grid-template-columns: 1fr; text-align: left; }
+  .hero__giant { top: 22%; }                  /* atrás da lata, não do texto */
   .hero__can img { height: clamp(300px, 52vh, 480px); }
   .facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .block--split { grid-template-columns: 1fr; }
