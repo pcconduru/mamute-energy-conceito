@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mamute Energy Drink – Energia de alta performance</title>
+  <meta name="description" content="Mamute Energy Drink: energia de alta performance para quem vive no limite. Zero açúcar, 100% atitude e sabor. Original, Tropical, Melancia e Maçã Verde." />
+  <meta name="theme-color" content="#000000" />
+  <!-- Proposta conceitual: fora dos buscadores até virar o site oficial -->
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" type="image/svg+xml" href="assets/logo-mamute.svg" />
+
+  <!-- Tipografia
+       Geist / Geist Mono  -> equivalentes diretos das fontes da referência (texto e HUD)
+       Libre Franklin 900 itálico -> substituto livre da "Franklin Gothic ATF" usada nos títulos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Libre+Franklin:ital,wght@1,800;1,900&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="assets/lata-original.webp" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body data-flavor="original" class="is-loading">
+
+  <!-- Símbolo do mamute (vetorizado da arte da lata) — reutilizado com <use href="#mamute-mark"> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mamute-mark" viewBox="0 0 1400 937"><path fill="currentColor" fill-rule="evenodd" d="M 577 17.070 C 570.125 18.112, 559.775 19.472, 554 20.094 C 548.225 20.715, 540.350 22.092, 536.500 23.153 C 532.650 24.215, 524.197 26.410, 517.716 28.033 C 511.234 29.656, 504.659 31.642, 503.104 32.446 C 501.549 33.250, 497.177 34.673, 493.389 35.608 C 489.600 36.543, 483.800 38.560, 480.500 40.089 C 477.200 41.619, 473.150 43.178, 471.500 43.554 C 468.824 44.165, 452.683 51.366, 447.500 54.261 C 445.435 55.415, 437.110 59.513, 433.531 61.138 C 430.922 62.323, 415.096 72.445, 403.693 80.221 C 396.694 84.995, 375.645 101.714, 367.316 109.116 C 340.815 132.668, 330.935 141.856, 319 154.050 C 311.575 161.636, 300.719 172.100, 294.875 177.304 C 289.031 182.508, 281.381 189.459, 277.875 192.750 C 274.369 196.042, 268.800 200.902, 265.500 203.550 C 262.200 206.198, 255.382 211.996, 250.349 216.433 C 236.888 228.300, 226.243 237.086, 221.009 240.647 C 214.762 244.899, 195.597 263.297, 192.943 267.593 C 188.276 275.144, 186.811 287.111, 189.405 296.500 C 190.712 301.230, 195.630 310.392, 202.794 321.446 C 204.557 324.166, 206 326.738, 206 327.161 C 206 327.584, 207.312 329.999, 208.915 332.527 C 210.518 335.055, 212.380 339.458, 213.051 342.312 C 213.722 345.165, 215.647 350.875, 217.328 355 L 220.385 362.500 220.541 396.579 L 220.696 430.657 223.246 436.227 C 226.665 443.694, 236.380 453.319, 244.262 457.046 C 252.336 460.865, 259.699 467.407, 264 474.584 C 267.426 480.301, 267.499 480.648, 267.435 490.962 C 267.371 501.406, 267.330 501.580, 262.857 510.500 C 256.008 524.155, 251.602 530.420, 242.139 539.956 C 224.593 557.636, 201.184 572.306, 183.970 576.409 C 180.412 577.257, 171.743 579.355, 164.707 581.070 C 152.299 584.095, 151.366 584.177, 133.707 583.793 C 115.093 583.388, 111.408 582.649, 100 577.036 C 97.969 576.037, 97.541 571.368, 99.234 568.685 C 99.993 567.483, 101.144 564.700, 101.791 562.500 C 102.439 560.300, 103.952 556.925, 105.153 555 C 106.355 553.075, 109.702 546.913, 112.593 541.307 C 115.483 535.701, 119.621 528.501, 121.787 525.307 C 134.848 506.054, 132.563 501.934, 115.500 513.970 C 111.650 516.686, 105.557 520.925, 101.959 523.391 C 98.362 525.857, 88.792 534.653, 80.693 542.938 C 66.516 557.438, 65.816 558, 61.927 558 C 58.134 558, 57.774 557.741, 56.023 553.750 C 53.618 548.270, 50.993 535.429, 51.023 529.292 C 51.060 521.754, 55.628 501.011, 58.446 495.581 C 62.476 487.817, 61.498 483.133, 56.527 486.390 C 41.458 496.264, 26.792 522.892, 24.798 544 C 23.469 558.063, 24.236 575.248, 26.449 581 C 31.222 593.406, 31.452 591.138, 22.998 615 C 17.141 631.532, 15.853 641.934, 17.838 656.682 C 20.328 675.185, 34.021 698.247, 49.382 709.812 C 60.178 717.940, 68.168 723.148, 71.815 724.435 C 73.900 725.170, 78.492 727.229, 82.021 729.010 C 85.549 730.791, 92.500 733.091, 97.468 734.121 C 102.435 735.151, 108.975 736.682, 112 737.524 C 124.746 741.071, 157.974 740.376, 179.114 736.122 C 184.276 735.083, 193.675 733.689, 200 733.025 C 208.102 732.174, 213.621 730.975, 218.679 728.967 C 222.628 727.400, 227.578 725.804, 229.679 725.421 C 231.781 725.039, 236.198 723.375, 239.496 721.724 C 242.793 720.074, 247.937 717.882, 250.926 716.854 C 253.915 715.825, 257.083 714.330, 257.967 713.530 C 258.850 712.731, 261.807 711.096, 264.537 709.898 C 267.266 708.701, 271.413 706.433, 273.750 704.860 C 276.087 703.287, 279.913 700.712, 282.250 699.138 C 284.587 697.564, 288.075 695.472, 290 694.489 C 293.819 692.540, 308.421 681.399, 312.778 677.111 C 314.275 675.638, 318.650 671.522, 322.500 667.966 C 326.350 664.410, 332.364 658.350, 335.865 654.500 C 347.853 641.318, 366.155 610.865, 368.988 599.385 C 370.421 593.582, 376.738 586.009, 380.150 586.004 C 383.283 585.999, 389.004 589.546, 409.500 604.201 C 413.510 607.068, 428.108 616.789, 441.827 625.727 C 451.114 631.777, 458.301 637.385, 471.126 648.588 C 476.738 653.490, 484.968 660.680, 489.415 664.567 C 499.337 673.240, 519 698.307, 519 702.284 C 519 702.837, 520.554 706.520, 522.453 710.468 C 524.351 714.416, 526.377 720.539, 526.955 724.073 C 527.532 727.608, 529.128 734.547, 530.502 739.493 C 533.781 751.297, 533.801 760.325, 530.571 770.698 C 529.235 774.989, 527.672 780.300, 527.096 782.500 C 524.675 791.761, 508.696 808.388, 498.076 812.699 C 496.109 813.497, 491.916 815.474, 488.759 817.092 C 479.958 821.601, 457.354 823.705, 436 822.002 C 421.512 820.847, 419.767 820.480, 409.284 816.383 C 403.116 813.972, 397.811 812, 397.495 812 C 397.179 812, 394.582 810.425, 391.724 808.500 C 388.865 806.575, 386.184 805, 385.766 805 C 385.348 805, 380.570 802.075, 375.148 798.500 C 368.956 794.417, 364.255 792, 362.507 792 C 354.940 792, 323.875 811.118, 310.656 823.909 C 299.386 834.815, 298.050 838.257, 302.046 846.090 C 304.074 850.065, 324.705 871.418, 330.710 875.758 C 340.339 882.715, 367.366 896.310, 374.610 897.840 C 377.421 898.433, 382.146 899.893, 385.110 901.084 C 393.818 904.582, 396.269 904.940, 422.500 906.539 C 454.344 908.479, 483.178 906.756, 498.500 901.997 C 503.450 900.459, 510.781 898.489, 514.790 897.619 C 518.800 896.749, 523.975 894.954, 526.290 893.630 C 528.606 892.305, 532.300 890.660, 534.500 889.972 C 536.700 889.285, 539.625 887.943, 541 886.989 C 542.375 886.036, 545.975 884.014, 549 882.496 C 552.025 880.978, 555.900 878.558, 557.612 877.118 C 559.324 875.678, 564.437 871.575, 568.974 868 C 577.029 861.654, 584.945 853.274, 592 843.623 C 593.925 840.990, 596.655 837.410, 598.066 835.668 C 601.472 831.462, 611 815.420, 611 813.890 C 611 813.227, 612.755 808.817, 614.901 804.092 C 617.279 798.854, 619.063 793.158, 619.472 789.500 C 619.840 786.200, 621.233 779.994, 622.567 775.709 C 627.465 759.979, 628.213 733.041, 624.072 721.500 C 622.888 718.200, 621.038 711.775, 619.962 707.221 C 618.885 702.668, 616.830 696.625, 615.395 693.793 C 613.960 690.960, 612.177 686.918, 611.433 684.810 C 609.921 680.524, 605.394 673.521, 600.244 667.500 C 589.711 655.186, 572 627.035, 572 622.606 C 572 621.661, 570.425 617.082, 568.500 612.432 L 565 603.977 565 587.862 C 565 571.796, 565.011 571.721, 568.540 562.624 C 576.440 542.262, 582.691 533.413, 598.742 519.868 C 613.336 507.553, 623.770 492.477, 630.140 474.500 C 635.833 458.432, 636.117 449.914, 631.299 439.743 C 629.539 436.027, 627.629 430.442, 627.054 427.332 C 626.479 424.222, 624.915 418.938, 623.579 415.589 C 616.052 396.729, 615.652 354.431, 622.866 340.253 C 623.916 338.189, 625.721 333.350, 626.876 329.500 C 628.032 325.650, 629.904 321.150, 631.037 319.500 C 632.171 317.850, 634.423 313.800, 636.043 310.500 C 637.663 307.200, 640.229 302.629, 641.744 300.342 C 643.260 298.055, 646.300 293.378, 648.500 289.948 C 650.700 286.519, 655.835 279.840, 659.910 275.106 C 666.740 267.174, 672.708 261.143, 694.500 240.147 C 713.250 222.082, 732.668 195.716, 737.634 181.576 C 738.808 178.234, 740.510 173.541, 741.415 171.146 C 743.486 165.670, 744.925 147.914, 743.906 140.407 C 742.286 128.468, 731.559 108.739, 721.330 98.884 C 711.854 89.755, 693.779 78.020, 684.549 75.004 C 682.376 74.293, 678.156 72.632, 675.171 71.312 C 672.186 69.992, 666.764 68.232, 663.122 67.402 C 659.480 66.572, 653.345 64.816, 649.488 63.500 C 645.123 62.011, 638.895 60.871, 632.988 60.481 C 612.006 59.096, 590.146 56.831, 584 55.405 C 579.954 54.466, 575.707 54.140, 572.750 54.542 C 566.859 55.343, 566.789 54.529, 572.250 48.701 C 575.920 44.785, 577.567 43.880, 584.323 42.066 C 588.626 40.911, 593.851 39.096, 595.935 38.033 C 598.185 36.885, 603.535 35.709, 609.112 35.137 C 614.275 34.607, 624.705 32.784, 632.289 31.086 C 639.873 29.389, 647.748 27.993, 649.789 27.985 C 659.193 27.946, 657.836 23.816, 647.850 22.084 C 643.808 21.383, 636.045 19.502, 630.601 17.905 C 618.229 14.275, 597.584 13.953, 577 17.070 M 830.891 68.068 C 822.973 69.232, 808.075 75.507, 804.750 79.078 C 801.200 82.890, 801.125 87.964, 804.504 95.604 C 808.425 104.472, 811.142 122.141, 811.100 138.500 C 811.054 156.022, 809.283 166.284, 804.614 176.086 C 802.626 180.258, 801 184.125, 801 184.681 C 801 185.236, 799.200 188.475, 797 191.879 C 794.800 195.283, 793 198.265, 793 198.506 C 793 199.045, 777.982 218.867, 773.066 224.817 C 755.698 245.838, 711.135 294.914, 702.072 303 C 699.932 304.909, 686.309 320.386, 682.707 325 C 670.436 340.720, 668 343.985, 668 344.713 C 668 345.170, 666.658 347.172, 665.018 349.162 C 661.005 354.031, 655.712 369.873, 655.717 377 C 655.722 385.166, 660.438 399.270, 665.628 406.646 C 673.928 418.442, 680.984 421.404, 700.373 421.233 C 714.672 421.108, 728.077 419.313, 735.500 416.530 C 740.795 414.545, 749.328 412.560, 761.213 410.551 C 763.255 410.206, 767.430 408.777, 770.491 407.375 C 777.484 404.174, 800.661 402.589, 826 403.580 C 841.102 404.170, 843.051 404.463, 849 407.035 C 852.575 408.581, 858.434 410.525, 862.019 411.355 C 865.605 412.185, 871.163 414.245, 874.371 415.932 C 877.579 417.619, 880.721 419, 881.354 419 C 882.853 419, 898.216 427.928, 904 432.161 C 918.157 442.520, 929.929 455.315, 934.628 465.450 C 935.916 468.227, 938.114 472.525, 939.512 475 C 941.538 478.584, 941.999 480.619, 941.777 485 C 941.412 492.246, 938.788 492.848, 931.472 487.362 C 928.737 485.312, 924.925 482.457, 923 481.019 C 917.074 476.590, 905.732 469.357, 901 466.990 C 898.525 465.752, 895.357 463.934, 893.961 462.951 C 892.564 461.968, 888.698 460.458, 885.368 459.595 C 882.039 458.733, 877.332 457.151, 874.907 456.081 C 868.324 453.174, 854.686 451.743, 837.667 452.174 C 822.691 452.552, 822.343 452.613, 810 457.002 C 775.170 469.389, 749.552 495.091, 735.429 531.815 C 730.506 544.617, 729.707 551.156, 730.215 574.461 C 730.623 593.179, 730.832 594.994, 733.374 602 C 734.871 606.125, 737.132 612.650, 738.398 616.500 C 739.665 620.350, 741.893 625.848, 743.351 628.717 C 744.808 631.586, 746 634.597, 746 635.407 C 746 637.925, 756.991 658.027, 763.820 668 C 786.882 701.679, 821.995 735.527, 839 740.474 C 840.375 740.874, 843.870 742.514, 846.768 744.119 C 849.665 745.724, 854.840 747.688, 858.268 748.484 C 861.695 749.280, 867.158 750.847, 870.407 751.966 C 877.834 754.524, 893.395 754.732, 899.500 752.355 C 901.700 751.498, 907.100 749.789, 911.500 748.557 C 923.206 745.278, 939.708 736.286, 955.507 724.575 C 959.903 721.316, 965.075 717.520, 967 716.139 C 975.131 710.305, 988.896 697.665, 989.988 695.030 C 990.846 692.957, 990.873 691.631, 990.085 690.159 C 988.869 687.888, 981.811 681.940, 978 679.976 C 967.742 674.689, 952.489 658.227, 946.890 646.403 C 940.377 632.645, 940.736 631.240, 953.949 618.820 C 965.737 607.739, 974.185 601.613, 980.031 599.908 C 982.489 599.191, 986.256 597.463, 988.402 596.069 C 997.327 590.269, 1010.727 594.454, 1025.923 607.787 C 1029.541 610.960, 1036.668 616.631, 1041.761 620.387 C 1046.855 624.144, 1051.355 627.777, 1051.761 628.459 C 1052.430 629.584, 1063.381 639.234, 1075.569 649.438 C 1078.156 651.604, 1082.799 655.012, 1085.886 657.011 C 1091.992 660.963, 1104.246 673.594, 1106.699 678.463 C 1107.540 680.133, 1109.283 682.630, 1110.573 684.011 C 1114.090 687.779, 1121.070 702.741, 1122.228 708.995 C 1122.788 712.023, 1124.364 719.118, 1125.728 724.763 C 1128.790 737.428, 1128.888 744.193, 1126.158 754.500 C 1124.992 758.900, 1123.363 765.531, 1122.537 769.236 C 1121.711 772.940, 1119.677 778.516, 1118.018 781.626 C 1116.358 784.737, 1115 787.799, 1115 788.432 C 1115 789.913, 1106.467 803.388, 1102.269 808.537 C 1100.492 810.717, 1097.403 814.525, 1095.404 817 C 1093.405 819.475, 1082.483 830.960, 1071.134 842.522 C 1027.297 887.183, 1023.481 894.842, 1043.500 897.992 C 1047.350 898.598, 1054.550 900.367, 1059.500 901.924 C 1064.450 903.481, 1071.425 905.054, 1075 905.419 C 1078.575 905.785, 1085.343 907.396, 1090.040 909 C 1094.737 910.604, 1101.937 912.429, 1106.040 913.055 C 1110.143 913.681, 1116.452 915.478, 1120.060 917.049 C 1123.677 918.624, 1131.787 920.816, 1138.137 921.936 C 1144.471 923.053, 1151.588 924.649, 1153.952 925.483 C 1164.064 929.051, 1170.668 925.318, 1176.607 912.678 C 1177.945 909.830, 1181.259 903.675, 1183.971 899 C 1186.683 894.325, 1190.665 887.125, 1192.820 883 C 1194.974 878.875, 1199.668 869.875, 1203.249 863 C 1212.589 845.074, 1215.847 839.178, 1219.643 833.331 C 1221.490 830.487, 1223 827.763, 1223 827.276 C 1223 826.790, 1224.419 824.166, 1226.153 821.446 C 1227.887 818.726, 1230.754 813.800, 1232.524 810.500 C 1238.714 798.956, 1241.199 794.492, 1241.986 793.500 C 1242.716 792.580, 1244.590 789.160, 1253.496 772.500 C 1255.260 769.200, 1258.120 764.274, 1259.852 761.554 C 1261.583 758.834, 1263.001 756.134, 1263.002 755.554 C 1263.004 754.974, 1264.691 751.937, 1266.752 748.804 C 1268.814 745.671, 1272.497 739.596, 1274.939 735.304 C 1277.380 731.012, 1280.868 725.732, 1282.689 723.570 C 1284.510 721.409, 1286 719.148, 1286 718.547 C 1286 717.946, 1287.504 715.170, 1289.343 712.378 C 1291.182 709.586, 1294.143 704.646, 1295.923 701.401 C 1302.039 690.252, 1309.435 676.485, 1314.964 665.959 C 1318.009 660.161, 1321.400 653.928, 1322.500 652.108 C 1329.571 640.409, 1331.491 637.110, 1333.091 633.916 C 1334.078 631.945, 1337.243 626.545, 1340.124 621.916 C 1343.005 617.287, 1346.920 610.575, 1348.824 607 C 1350.728 603.425, 1353.055 599.600, 1353.994 598.500 C 1354.933 597.400, 1357.029 594.025, 1358.651 591 C 1360.274 587.975, 1362.114 584.600, 1362.741 583.500 C 1364.576 580.279, 1372 564.335, 1372 563.615 C 1372 563.253, 1373.548 558.995, 1375.440 554.152 C 1377.333 549.310, 1379.423 542.232, 1380.086 538.424 C 1380.749 534.616, 1382.375 528.350, 1383.701 524.500 C 1387.259 514.164, 1388.958 499.027, 1388.980 477.474 C 1389.004 454.862, 1387.897 444.860, 1384.017 432.610 C 1382.430 427.599, 1380.673 420.940, 1380.111 417.811 C 1379.550 414.682, 1377.782 409.507, 1376.183 406.311 C 1374.583 403.115, 1372.702 398.735, 1372.003 396.577 C 1370.189 390.983, 1363.482 378.721, 1357.568 370.188 C 1354.780 366.166, 1350.740 360.316, 1348.588 357.188 C 1340.885 345.989, 1316.747 323.309, 1302.500 313.885 C 1295.350 309.155, 1287.341 304.337, 1284.703 303.178 C 1282.064 302.019, 1278.689 300.114, 1277.203 298.944 C 1275.716 297.775, 1272.985 296.185, 1271.133 295.411 C 1269.281 294.637, 1265.906 292.845, 1263.633 291.427 C 1256.713 287.112, 1247.746 281.837, 1243 279.289 C 1240.525 277.961, 1235.125 274.908, 1231 272.505 C 1226.875 270.102, 1220.800 266.699, 1217.500 264.942 C 1208.480 260.141, 1194.857 251.756, 1177.790 240.500 C 1173.621 237.750, 1167.125 233.794, 1163.355 231.710 C 1159.585 229.625, 1153.575 226.141, 1150 223.966 C 1146.425 221.791, 1140.657 218.674, 1137.183 217.038 C 1133.708 215.403, 1129.511 212.925, 1127.856 211.532 C 1126.201 210.139, 1124.422 209, 1123.903 209 C 1123.385 209, 1121.282 207.942, 1119.230 206.648 C 1117.179 205.354, 1110.143 201.503, 1103.596 198.090 C 1097.049 194.677, 1089.768 190.560, 1087.416 188.942 C 1085.064 187.324, 1082.709 186, 1082.182 186 C 1081.655 186, 1079.036 184.514, 1076.362 182.698 C 1073.688 180.882, 1068.800 177.906, 1065.500 176.084 C 1062.200 174.262, 1055.900 170.414, 1051.500 167.534 C 1042.892 161.898, 1036.922 158.294, 1028.092 153.403 C 1025.016 151.699, 1018.900 148.231, 1014.500 145.695 C 1010.100 143.159, 1004.475 140.133, 1002 138.971 C 999.525 137.808, 996.825 136.253, 996 135.516 C 993.540 133.316, 977.033 124.046, 974.398 123.385 C 973.056 123.048, 969.253 121.024, 965.946 118.886 C 962.638 116.749, 959.705 115, 959.427 115 C 959.149 115, 956.582 113.425, 953.724 111.500 C 950.865 109.575, 948.026 108, 947.413 108 C 946.801 108, 944.480 106.682, 942.256 105.071 C 940.032 103.460, 935.802 100.927, 932.856 99.442 C 929.910 97.958, 926.283 95.885, 924.795 94.835 C 918.647 90.500, 892.289 76.850, 886.500 75.005 C 884.300 74.303, 880.700 72.817, 878.500 71.701 C 869.990 67.387, 847.304 65.656, 830.891 68.068 M 451 205.740 C 445.516 208.522, 394.827 256.499, 381.894 271.150 C 378.811 274.642, 371.481 282.992, 365.605 289.705 C 353.589 303.433, 344.646 311.861, 338 315.723 C 328.892 321.016, 328.166 322.897, 332.915 328.893 C 334.988 331.511, 338.760 333.978, 345.981 337.442 L 356.132 342.310 368.816 342.310 C 382.630 342.310, 383.882 341.955, 392.877 335.493 C 398.482 331.466, 405.485 323.133, 408.418 317 C 409.602 314.525, 411.682 310.700, 413.039 308.500 C 414.397 306.300, 417.921 299.550, 420.871 293.500 C 423.820 287.450, 427.316 280.391, 428.638 277.814 C 429.961 275.236, 431.650 271.411, 432.390 269.314 C 433.131 267.216, 436.900 258.975, 440.767 251 C 444.633 243.025, 448.982 234.025, 450.430 231 C 451.878 227.975, 453.726 224.309, 454.537 222.854 C 455.347 221.398, 456.293 218.023, 456.640 215.354 C 456.986 212.684, 457.977 209.686, 458.843 208.691 C 459.997 207.365, 460.142 206.448, 459.387 205.251 C 457.792 202.723, 456.840 202.778, 451 205.740 M 247 596.126 C 243.975 597.819, 239.088 600.771, 236.140 602.685 C 233.192 604.600, 228.917 606.821, 226.640 607.622 C 224.363 608.423, 220.873 610.152, 218.884 611.464 C 216.896 612.777, 213.296 614.378, 210.884 615.023 C 208.473 615.668, 202.661 617.692, 197.968 619.521 C 191.133 622.185, 186.484 623.170, 174.591 624.473 C 166.426 625.368, 157.491 626.528, 154.736 627.050 C 146.982 628.521, 135.951 628.183, 122.650 626.068 C 115.967 625.006, 107.459 623.687, 103.741 623.138 C 100.024 622.588, 94.457 620.982, 91.370 619.569 C 81.860 615.215, 79.081 616.424, 77.119 625.769 C 75.982 631.187, 76.898 641.997, 79.056 648.627 C 81.991 657.644, 100.975 670.177, 115.189 672.482 C 133.651 675.476, 165.200 673.019, 175.643 667.773 C 178.358 666.410, 182.361 664.727, 184.539 664.035 C 190.959 661.993, 206.955 654.044, 214.500 649.146 C 227.972 640.400, 253 612.385, 253 606.051 C 253 605.071, 253.930 603.087, 255.067 601.642 C 257.684 598.315, 257.364 593.598, 254.500 593.274 C 253.400 593.149, 250.025 594.433, 247 596.126 M 705.080 686.646 C 702.811 689.224, 700.372 693.374, 699.602 695.969 C 698.838 698.542, 697.064 702.913, 695.661 705.683 C 694.257 708.452, 692.414 713.716, 691.564 717.381 C 690.714 721.045, 689.112 725.821, 688.003 727.994 C 684.606 734.652, 683.663 745.637, 683.579 779.500 C 683.496 812.949, 683.927 816.969, 688.574 826.102 C 689.302 827.533, 690.549 832.708, 691.344 837.602 C 692.140 842.496, 694.127 849.875, 695.760 854 C 697.393 858.125, 699.046 863.300, 699.432 865.500 C 699.818 867.700, 701.155 871.075, 702.402 873 C 703.649 874.925, 705.587 879.200, 706.708 882.500 C 707.830 885.800, 710.754 891.875, 713.206 896 C 720.694 908.596, 727.281 909.538, 753.500 901.759 C 759.483 899.984, 767.549 898.461, 773.581 897.967 C 788.217 896.769, 799.156 895.151, 810.500 892.509 C 818.464 890.654, 824.674 890.053, 841 889.558 C 869.899 888.682, 885.020 887.409, 886.718 885.710 C 889.538 882.891, 886.902 878.793, 872.961 864.319 C 865.420 856.490, 857.647 847.668, 855.687 844.716 C 853.727 841.763, 851.415 838.759, 850.548 838.040 C 849.115 836.851, 846.799 833.143, 834.873 812.940 C 832.743 809.332, 831 805.788, 831 805.066 C 831 804.343, 829.410 800.231, 827.467 795.927 C 825.116 790.719, 823.727 785.886, 823.315 781.474 C 822.568 773.473, 820.083 769.289, 814.423 766.500 C 812.190 765.400, 809.131 763.515, 807.624 762.311 C 806.117 761.107, 802.773 759.344, 800.192 758.395 C 795.163 756.544, 791.315 754.367, 779.167 746.500 C 764.527 737.018, 751.510 724.710, 729.383 699.425 C 712.125 679.704, 711.487 679.368, 705.080 686.646"/></symbol>
+    <clipPath id="loader-fill" clipPathUnits="userSpaceOnUse">
+      <path data-loader-wave d="M-1400 40 Q-1225 0 -1050 40 T -700 40 T -350 40 T 0 40 T 350 40 T 700 40 T 1050 40 T 1400 40 T 1750 40 T 2100 40 T 2450 40 T 2800 40 V 2000 H -1400 Z" transform="translate(0 937)" />
+    </clipPath>
+  </svg>
+
+  <!-- ==========================================================
+       LOADER — o mamute "enche" de energia de baixo para cima
+       ========================================================== -->
+  <div class="loader" data-loader aria-hidden="true">
+    <svg class="loader__mark" viewBox="0 0 1400 937">
+      <use href="#mamute-mark" class="loader__mark-dim" />
+      <use href="#mamute-mark" class="loader__mark-fill" clip-path="url(#loader-fill)" />
+    </svg>
+    <span class="loader__brand">Mamute Energy Drink</span>
+    <span class="loader__count" data-loader-count>0%</span>
+  </div>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- ==========================================================
+       NAVBAR fixa — menu (esq.), logo (centro), comprar (dir.)
+       ========================================================== -->
+  <header class="navbar">
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" data-menu-open>
+      <span class="menu-btn__dots" aria-hidden="true"></span>
+      <span>Menu</span>
+    </button>
+
+    <a class="logo logo--nav" href="#topo" aria-label="Mamute Energy Drink — início">
+      <svg class="logo__mark" viewBox="0 0 1400 937" aria-hidden="true"><use href="#mamute-mark" /></svg>
+      <span class="logo__text">
+        <span class="logo__name">Mamute</span>
+        <span class="logo__tag">Energy Drink</span>
+      </span>
+    </a>
+
+    <div class="navbar__actions">
+      <a class="btn btn--light btn--nav" href="https://loja.mamuteenergydrink.com.br" target="_blank" rel="noopener">Comprar</a>
+    </div>
+  </header>
+
+  <!-- ==========================================================
+       MENU em tela cheia
+       ========================================================== -->
+  <div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Menu" data-menu hidden>
+    <div class="menu__top">
+      <span class="menu__label">Menu</span>
+      <button class="menu__close" type="button" data-menu-close aria-label="Fechar menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19" /></svg>
+      </button>
+    </div>
+    <nav class="menu__links" aria-label="Principal">
+      <a href="#sabores" data-menu-link>Sabores</a>
+      <a href="#por-dentro" data-menu-link>Por dentro</a>
+      <a href="#tamanhos" data-menu-link>Tamanhos</a>
+      <a href="#momentos" data-menu-link>Momentos</a>
+      <a href="#revenda" data-menu-link>Revenda</a>
+      <a href="#faq" data-menu-link>FAQ</a>
+    </nav>
+    <div class="menu__bottom">
+      <a class="btn btn--accent" href="https://loja.mamuteenergydrink.com.br" target="_blank" rel="noopener">Comprar na loja oficial</a>
+      <div class="menu__social">
+        <a href="https://www.instagram.com/mamuteenergydrink/" target="_blank" rel="noopener" class="link-mono">Instagram</a>
+        <a href="https://x.com/mamuteenergy" target="_blank" rel="noopener" class="link-mono">X</a>
+        <a href="https://www.facebook.com/energeticomamute/" target="_blank" rel="noopener" class="link-mono">Facebook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================
+       HUD — molduras de canto + barra de progresso da rolagem
+       ========================================================== -->
+  <div class="hud" aria-hidden="true">
+    <span class="hud__corner hud__corner--tl"></span>
+    <span class="hud__corner hud__corner--tr"></span>
+    <span class="hud__corner hud__corner--bl"></span>
+    <span class="hud__corner hud__corner--br"></span>
+    <span class="hud__side hud__side--left">M<br>E<br>_</span>
+    <span class="hud__side hud__side--right" data-hud-index>01<br>/<br>04</span>
+    <span class="hud__energy">
+      <span class="hud__energy-bar"><span data-energy-bar></span></span>
+      <span class="hud__energy-label">Energia <b data-energy>0</b>%</span>
+    </span>
+    <span class="hud__progress"><span data-hud-progress></span></span>
+  </div>
+
+  <main id="conteudo">
+
+    <!-- ========================================================
+         1. HERO — a lata despenca e "pisa" no chão; o letreiro MAMUTE
+         salta do chão com o impacto. Arraste a lata para girar.
+         ======================================================== -->
+    <section class="section hero" id="topo" data-hero>
+      <h1 class="sr-only">Mamute Energy Drink – Energia de alta performance para quem vive no limite</h1>
+      <div class="hero__beam" aria-hidden="true"></div>
+
+      <p class="hero__claim">Energia de alta performance<br>para quem vive no limite.</p>
+      <ul class="hero__facts" aria-label="Destaques">
+        <li>473 ml</li>
+        <li>Zero açúcar</li>
+        <li>Cafeína + Taurina</li>
+      </ul>
+
+      <div class="hero__stage">
+        <div class="hero__glow" aria-hidden="true"></div>
+        <!-- Letreiro gigante atrás da lata: cada letra salta com a pisada (fx.js) -->
+        <p class="hero__word" aria-hidden="true" data-hero-word><span>M</span><span>A</span><span>M</span><span>U</span><span>T</span><span>E</span></p>
+        <!-- Foto = reserva sem WebGL · com 3D vira âncora invisível da lata -->
+        <img class="can can--hero" src="assets/lata-original.webp" alt="Lata Mamute Energy Drink sabor Original, 473 ml"
+             width="398" height="748" data-flavor-img
+             data-can-anchor data-can-rest=".hero__floor" data-can-scale="0.9" data-can-tilt="0" data-can-lean="5" />
+        <!-- Linha do chão (a lata fica em pé sobre ela; o 3D desenha o chão) -->
+        <div class="hero__floor" aria-hidden="true"></div>
+        <span class="hero__hint" data-can-hint aria-hidden="true"><i></i>Arraste para girar</span>
+      </div>
+
+      <div class="hero__aside">
+        <span class="eyebrow" data-flavor-index>N°01 — Linha Mamute</span>
+        <p class="display hero__title" data-flavor-name>Original</p>
+        <p class="hero__tagline" data-flavor-tagline>O clássico do bando.</p>
+      </div>
+
+      <div class="flavor-rail" role="tablist" aria-label="Escolha o sabor" data-flavor-rail>
+        <button class="flavor-rail__btn" role="tab" type="button" aria-selected="true" data-flavor-btn="original" aria-label="Original">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+        </button>
+        <button class="flavor-rail__btn" role="tab" type="button" aria-selected="false" data-flavor-btn="tropical" aria-label="Tropical">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22c0-6 .5-10 1-13M13 9c-2-3-6-3-8-1 3 0 5 .5 8 1zM13 9c1-3 5-5 8-3-3 .5-5 1.5-8 3zM13 9c-3-1-6 1-7 4 2-2 4-3 7-4zM13 9c3 0 6 2 6 5-2-2-3.5-3.5-6-5z" /></svg>
+        </button>
+        <button class="flavor-rail__btn" role="tab" type="button" aria-selected="false" data-flavor-btn="melancia" aria-label="Melancia">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 9h18a9 9 0 0 1-18 0zM6.5 9a5.5 5.5 0 0 0 11 0" /><circle cx="9.5" cy="12" r=".8" /><circle cx="12" cy="13.5" r=".8" /><circle cx="14.5" cy="12" r=".8" /></svg>
+        </button>
+        <button class="flavor-rail__btn" role="tab" type="button" aria-selected="false" data-flavor-btn="maca-verde" aria-label="Maçã Verde">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.6 2-.6s1 .6 2 .6c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7zM12 7c0-2 1-4 3-4.5" /></svg>
+        </button>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span class="hero__scroll-track"><span></span></span>
+        <span class="link-mono">Role para descobrir</span>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         2. MANIFESTO — texto que acende palavra por palavra com o scroll
+         ======================================================== -->
+    <section class="section manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto__sticky" data-sticky>
+        <div class="container manifesto__inner">
+          <div class="manifesto__copy">
+            <span class="eyebrow" id="manifesto-title">Manifesto</span>
+            <p class="manifesto__text" data-scrub-text>
+              Da balada ao treino. Da pista à madrugada. Feito pra quem vive no limite e não
+              aceita energia pela metade. Zero açúcar, 100% atitude e sabor —
+              <em>isso é força de mamute.</em>
+            </p>
+          </div>
+          <div class="can-slot manifesto__slot" data-can-anchor data-can-hold data-can-scale="0.95" data-can-tilt="-16" data-can-lean="6"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. SABORES — painéis coloridos na horizontal (a página "trava")
+         ======================================================== -->
+    <section class="section flavors" id="sabores" aria-label="Sabores" data-flavors data-cursor-label="Role">
+      <div class="flavors__sticky" data-sticky>
+        <div class="flavors__track" data-flavors-track>
+
+          <!-- Original -->
+          <article class="flavor-panel flavor-panel--original" data-panel="original" data-tone="light" aria-labelledby="fp-original">
+            <div class="flavor-panel__deco" aria-hidden="true">
+              <svg class="deco deco--1" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+              <svg class="deco deco--2" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+              <svg class="deco deco--3" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+              <svg class="deco deco--4" viewBox="0 0 24 24"><path d="M13 2L4 14h7l-1 8 9-12h-7z" /></svg>
+            </div>
+            <span class="flavor-panel__giant" aria-hidden="true">Original</span>
+            <div class="flavor-panel__copy">
+              <span class="flavor-panel__num">N°01 / 04</span>
+              <h2 class="display flavor-panel__title" id="fp-original">Original</h2>
+              <p>O clássico do bando. Intenso, marcante e zero açúcar — a lata preta que começou tudo.</p>
+            </div>
+            <dl class="flavor-panel__specs">
+              <div><dt>Perfil</dt><dd>Intenso · Clássico</dd></div>
+              <div><dt>Combina com</dt><dd>Balada e treino pesado</dd></div>
+              <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
+            </dl>
+            <img class="flavor-panel__img" src="assets/lata-original.webp" alt="" width="398" height="748" loading="lazy" />
+          </article>
+
+          <!-- Tropical -->
+          <article class="flavor-panel flavor-panel--tropical" data-panel="tropical" aria-labelledby="fp-tropical">
+            <div class="flavor-panel__deco" aria-hidden="true">
+              <!-- kiwi -->
+              <svg class="deco deco--1 deco--kiwi" viewBox="0 0 24 24"><circle class="skin" cx="12" cy="12" r="11" /><circle class="flesh" cx="12" cy="12" r="9.4" /><circle class="core" cx="12" cy="12" r="3.2" /><g class="seeds"><ellipse cx="12" cy="6.6" rx=".5" ry="1" /><ellipse cx="17.4" cy="12" rx="1" ry=".5" /><ellipse cx="12" cy="17.4" rx=".5" ry="1" /><ellipse cx="6.6" cy="12" rx="1" ry=".5" /><ellipse cx="15.8" cy="8.2" rx=".5" ry="1" transform="rotate(45 15.8 8.2)" /><ellipse cx="8.2" cy="15.8" rx=".5" ry="1" transform="rotate(45 8.2 15.8)" /><ellipse cx="15.8" cy="15.8" rx=".5" ry="1" transform="rotate(-45 15.8 15.8)" /><ellipse cx="8.2" cy="8.2" rx=".5" ry="1" transform="rotate(-45 8.2 8.2)" /></g></svg>
+              <!-- maracujá -->
+              <svg class="deco deco--2 deco--passion" viewBox="0 0 24 24"><circle class="skin" cx="12" cy="12" r="11" /><circle class="pulp" cx="12" cy="12" r="8.6" /><g class="seeds"><circle cx="9" cy="9" r="1.1" /><circle cx="14.5" cy="8.5" r="1.1" /><circle cx="12" cy="12.5" r="1.1" /><circle cx="8" cy="14" r="1.1" /><circle cx="15.5" cy="14.5" r="1.1" /><circle cx="11.5" cy="16.8" r="1.1" /></g></svg>
+              <!-- abacaxi (fatia) -->
+              <svg class="deco deco--3 deco--pineapple" viewBox="0 0 24 24"><path class="skin" d="M12 1a11 11 0 1 1 0 22 11 11 0 0 1 0-22z" /><path class="flesh" d="M12 3a9 9 0 1 1 0 18 9 9 0 0 1 0-18z" /><path class="rays" d="M12 5v14M5 12h14M7 7l10 10M17 7 7 17" /><circle class="core" cx="12" cy="12" r="2.4" /></svg>
+              <svg class="deco deco--4 deco--kiwi" viewBox="0 0 24 24"><circle class="skin" cx="12" cy="12" r="11" /><circle class="flesh" cx="12" cy="12" r="9.4" /><circle class="core" cx="12" cy="12" r="3.2" /></svg>
+            </div>
+            <span class="flavor-panel__giant" aria-hidden="true">Tropical</span>
+            <div class="flavor-panel__copy">
+              <span class="flavor-panel__num">N°02 / 04</span>
+              <h2 class="display flavor-panel__title" id="fp-tropical">Tropical</h2>
+              <p>Kiwi, maracujá e abacaxi num sabor de verão o ano inteiro. Doce na medida, refrescante até o último gole.</p>
+            </div>
+            <dl class="flavor-panel__specs">
+              <div><dt>Perfil</dt><dd>Solar · Refrescante</dd></div>
+              <div><dt>Combina com</dt><dd>Praia, piscina e fim de tarde</dd></div>
+              <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
+            </dl>
+            <img class="flavor-panel__img" src="assets/lata-tropical.webp" alt="" width="305" height="560" loading="lazy" />
+          </article>
+
+          <!-- Melancia -->
+          <article class="flavor-panel flavor-panel--melancia" data-panel="melancia" aria-labelledby="fp-melancia">
+            <div class="flavor-panel__deco" aria-hidden="true">
+              <svg class="deco deco--1" viewBox="0 0 24 24"><path class="flesh" d="M2 8h20a10 10 0 0 1-20 0z" /><path class="rind" d="M2 8a10 10 0 0 0 20 0" /><ellipse cx="8" cy="11" rx=".7" ry="1.1" /><ellipse cx="12" cy="13" rx=".7" ry="1.1" /><ellipse cx="16" cy="11" rx=".7" ry="1.1" /></svg>
+              <svg class="deco deco--2" viewBox="0 0 24 24"><path class="flesh" d="M2 8h20a10 10 0 0 1-20 0z" /><path class="rind" d="M2 8a10 10 0 0 0 20 0" /><ellipse cx="8" cy="11" rx=".7" ry="1.1" /><ellipse cx="12" cy="13" rx=".7" ry="1.1" /><ellipse cx="16" cy="11" rx=".7" ry="1.1" /></svg>
+              <svg class="deco deco--3" viewBox="0 0 24 24"><path class="flesh" d="M2 8h20a10 10 0 0 1-20 0z" /><path class="rind" d="M2 8a10 10 0 0 0 20 0" /><ellipse cx="8" cy="11" rx=".7" ry="1.1" /><ellipse cx="12" cy="13" rx=".7" ry="1.1" /><ellipse cx="16" cy="11" rx=".7" ry="1.1" /></svg>
+              <svg class="deco deco--4" viewBox="0 0 24 24"><path class="flesh" d="M2 8h20a10 10 0 0 1-20 0z" /><path class="rind" d="M2 8a10 10 0 0 0 20 0" /><ellipse cx="8" cy="11" rx=".7" ry="1.1" /><ellipse cx="12" cy="13" rx=".7" ry="1.1" /><ellipse cx="16" cy="11" rx=".7" ry="1.1" /></svg>
+            </div>
+            <span class="flavor-panel__giant" aria-hidden="true">Melancia</span>
+            <div class="flavor-panel__copy">
+              <span class="flavor-panel__num">N°03 / 04</span>
+              <h2 class="display flavor-panel__title" id="fp-melancia">Melancia</h2>
+              <p>Suculenta e gelada. Melancia madura que refresca desde o primeiro gole — leve, fácil de gostar e zero açúcar.</p>
+            </div>
+            <dl class="flavor-panel__specs">
+              <div><dt>Perfil</dt><dd>Suculenta · Leve</dd></div>
+              <div><dt>Combina com</dt><dd>Verão inteiro</dd></div>
+              <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
+            </dl>
+            <img class="flavor-panel__img" src="assets/lata-melancia.webp" alt="" width="280" height="560" loading="lazy" />
+          </article>
+
+          <!-- Maçã Verde -->
+          <article class="flavor-panel flavor-panel--maca-verde" data-panel="maca-verde" data-tone="light" aria-labelledby="fp-maca">
+            <div class="flavor-panel__deco" aria-hidden="true">
+              <svg class="deco deco--1" viewBox="0 0 24 24"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.6 2-.6s1 .6 2 .6c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7z" /><path class="leaf" d="M12 7c0-2 1-4 3-4.5M13 5c1.5-1.8 3.5-2 5-1.4-1 1.6-3 2.2-5 1.4z" /></svg>
+              <svg class="deco deco--2" viewBox="0 0 24 24"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.6 2-.6s1 .6 2 .6c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7z" /><path class="leaf" d="M12 7c0-2 1-4 3-4.5M13 5c1.5-1.8 3.5-2 5-1.4-1 1.6-3 2.2-5 1.4z" /></svg>
+              <svg class="deco deco--3" viewBox="0 0 24 24"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.6 2-.6s1 .6 2 .6c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7z" /><path class="leaf" d="M12 7c0-2 1-4 3-4.5M13 5c1.5-1.8 3.5-2 5-1.4-1 1.6-3 2.2-5 1.4z" /></svg>
+              <svg class="deco deco--4" viewBox="0 0 24 24"><path d="M12 7c-2-1.5-7-1.5-7 4.5 0 4.5 3 9.5 5 9.5 1 0 1.3-.6 2-.6s1 .6 2 .6c2 0 5-5 5-9.5C19 5.5 14 5.5 12 7z" /><path class="leaf" d="M12 7c0-2 1-4 3-4.5M13 5c1.5-1.8 3.5-2 5-1.4-1 1.6-3 2.2-5 1.4z" /></svg>
+            </div>
+            <span class="flavor-panel__giant" aria-hidden="true">Maçã Verde</span>
+            <div class="flavor-panel__copy">
+              <span class="flavor-panel__num">N°04 / 04</span>
+              <h2 class="display flavor-panel__title" id="fp-maca">Maçã Verde</h2>
+              <p>Ácida na medida, crocante no paladar. Uma explosão verde que desperta na hora.</p>
+            </div>
+            <dl class="flavor-panel__specs">
+              <div><dt>Perfil</dt><dd>Ácida · Vibrante</dd></div>
+              <div><dt>Combina com</dt><dd>Madrugada de estudo</dd></div>
+              <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
+            </dl>
+            <img class="flavor-panel__img" src="assets/lata-maca-verde.webp" alt="" width="300" height="585" loading="lazy" />
+          </article>
+        </div>
+
+        <div class="can-slot flavors__slot" data-can-anchor data-can-hold data-can-steps="4" data-can-scale="0.92" data-can-tilt="6" data-can-lean="6"></div>
+        <ol class="flavors__dots" aria-hidden="true">
+          <li class="is-active">Original</li><li>Tropical</li><li>Melancia</li><li>Maçã Verde</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. POR DENTRO DA LATA — a lata gira no centro e as informações
+         aparecem ligadas a ela por linhas, conforme a rolagem
+         ======================================================== -->
+    <section class="section inside" id="por-dentro" aria-labelledby="inside-title">
+      <div class="inside__sticky" data-sticky>
+        <div class="inside__head container">
+          <span class="eyebrow">Por dentro da lata</span>
+          <h2 class="display inside__title" id="inside-title">O que move<br>o mamute</h2>
+        </div>
+
+        <div class="can-slot inside__slot" data-can-anchor data-can-hold data-can-turns="1.5" data-can-scale="0.94" data-can-tilt="0" data-can-lean="5"></div>
+
+        <!-- linhas: do texto até a lata (coordenadas em % da tela) -->
+        <svg class="inside__lines" viewBox="0 0 100 100" aria-hidden="true">
+          <polyline data-line="0" points="29,40 38,40 45.5,34" pathLength="1" />
+          <polyline data-line="1" points="29,62 38,62 45,56" pathLength="1" />
+          <polyline data-line="2" points="29,84 38,84 45.5,76" pathLength="1" />
+          <polyline data-line="3" points="71,36 62,36 54.5,30" pathLength="1" />
+          <polyline data-line="4" points="71,70 62,70 55,64" pathLength="1" />
+        </svg>
+
+        <ul class="inside__spots">
+          <li class="spot spot--l" style="--x:6%;--y:40%" data-spot>
+            <span class="spot__num">01</span>
+            <strong class="spot__title">Cafeína</strong>
+            <span class="spot__text">O estimulante clássico: disposição e foco na hora que você precisa.</span>
+          </li>
+          <li class="spot spot--l" style="--x:6%;--y:62%" data-spot>
+            <span class="spot__num">02</span>
+            <strong class="spot__title">Taurina</strong>
+            <span class="spot__text">Aminoácido que o próprio corpo produz, presente na fórmula.</span>
+          </li>
+          <li class="spot spot--l" style="--x:6%;--y:84%" data-spot>
+            <span class="spot__num">03</span>
+            <strong class="spot__title">Vitaminas do complexo B</strong>
+            <span class="spot__text">Micronutrientes essenciais para o funcionamento normal do organismo.</span>
+          </li>
+          <li class="spot spot--r" style="--x:72%;--y:36%" data-spot>
+            <span class="spot__num">04</span>
+            <strong class="spot__title">Zero açúcar</strong>
+            <span class="spot__text">0 g de açúcar · 0 g de carboidratos · 0 g de gordura.</span>
+          </li>
+          <li class="spot spot--r" style="--x:72%;--y:70%" data-spot>
+            <span class="spot__num">05</span>
+            <strong class="spot__title">Sucralose + Acesulfame K</strong>
+            <span class="spot__text">Adoçantes entre os mais testados e usados no mundo.</span>
+          </li>
+        </ul>
+        <p class="inside__note">Conforme a descrição oficial do produto. Consulte sempre a rotulagem.</p>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. TAMANHOS — silhuetas em escala real que "enchem" ao aparecer
+         (viewBox comum: 1 unidade ≈ 1 mm, base em y = 330)
+         ======================================================== -->
+    <section class="section sizes" id="tamanhos" aria-labelledby="sizes-title">
+      <div class="container">
+        <div class="sizes__head" data-reveal>
+          <span class="eyebrow">Tamanhos</span>
+          <h2 class="display sizes__title" id="sizes-title">Tem Mamute<br>pra todo rolê</h2>
+          <p class="lead">Da latinha pro corre rápido à garrafa de 2 litros pra dividir com o bando.</p>
+        </div>
+
+        <ul class="sizes__list">
+          <li class="size" data-reveal>
+            <svg class="size__art" viewBox="0 0 120 334" aria-hidden="true">
+              <defs><clipPath id="clip-269"><path d="M31 330Q27 330 27 325V223Q27 219 31 217L35 215H85L89 217Q93 219 93 223V325Q93 330 89 330Z" /></clipPath></defs>
+              <g clip-path="url(#clip-269)"><g class="size__level" style="--lvl:228px"><path class="size__liquid" d="M-120 8Q-90 0-60 8T0 8T60 8T120 8T180 8T240 8V400H-120Z" /></g></g>
+              <path class="size__outline" d="M31 330Q27 330 27 325V223Q27 219 31 217L35 215H85L89 217Q93 219 93 223V325Q93 330 89 330Z" />
+            </svg>
+            <strong class="size__vol">269<small>ml</small></strong>
+            <span class="size__type">Lata</span>
+          </li>
+          <li class="size" data-reveal>
+            <svg class="size__art" viewBox="0 0 120 334" aria-hidden="true">
+              <defs><clipPath id="clip-473"><path d="M31 330Q27 330 27 325V181Q27 177 31 175L35 173H85L89 175Q93 177 93 181V325Q93 330 89 330Z" /></clipPath></defs>
+              <g clip-path="url(#clip-473)"><g class="size__level" style="--lvl:188px"><path class="size__liquid" d="M-120 8Q-90 0-60 8T0 8T60 8T120 8T180 8T240 8V400H-120Z" /></g></g>
+              <path class="size__outline" d="M31 330Q27 330 27 325V181Q27 177 31 175L35 173H85L89 175Q93 177 93 181V325Q93 330 89 330Z" />
+            </svg>
+            <strong class="size__vol">473<small>ml</small></strong>
+            <span class="size__type">Lata</span>
+          </li>
+          <li class="size" data-reveal>
+            <svg class="size__art" viewBox="0 0 120 334" aria-hidden="true">
+              <defs><clipPath id="clip-350"><path d="M34 330Q30 330 30 325V220Q30 196 48 180V152H72V180Q90 196 90 220V325Q90 330 86 330Z" /></clipPath></defs>
+              <g clip-path="url(#clip-350)"><g class="size__level" style="--lvl:176px"><path class="size__liquid" d="M-120 8Q-90 0-60 8T0 8T60 8T120 8T180 8T240 8V400H-120Z" /></g></g>
+              <path class="size__outline" d="M34 330Q30 330 30 325V220Q30 196 48 180V152H72V180Q90 196 90 220V325Q90 330 86 330Z" />
+              <path class="size__cap" d="M46 152V141Q46 139 48 139H72Q74 139 74 141V152Z" />
+            </svg>
+            <strong class="size__vol">350<small>ml</small></strong>
+            <span class="size__type">Garrafa PET</span>
+          </li>
+          <li class="size" data-reveal>
+            <svg class="size__art" viewBox="0 0 120 334" aria-hidden="true">
+              <defs><clipPath id="clip-2l"><path d="M14 330Q8 330 8 322V110Q8 70 47 45V27H73V45Q112 70 112 110V322Q112 330 106 330Z" /></clipPath></defs>
+              <g clip-path="url(#clip-2l)"><g class="size__level" style="--lvl:62px"><path class="size__liquid" d="M-120 8Q-90 0-60 8T0 8T60 8T120 8T180 8T240 8V400H-120Z" /></g></g>
+              <path class="size__outline" d="M14 330Q8 330 8 322V110Q8 70 47 45V27H73V45Q112 70 112 110V322Q112 330 106 330Z" />
+              <path class="size__cap" d="M45 27V17Q45 15 47 15H73Q75 15 75 17V27Z" />
+            </svg>
+            <strong class="size__vol">2<small>L</small></strong>
+            <span class="size__type">Garrafa PET</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         6. MOMENTOS — painéis que se expandem (hover / toque)
+         ======================================================== -->
+    <section class="section moments" id="momentos" aria-labelledby="moments-title">
+      <div class="container">
+        <div class="moments__head" data-reveal>
+          <span class="eyebrow">Pra quem vive no limite</span>
+          <h2 class="display moments__title" id="moments-title">Onde o bando<br>se encontra</h2>
+        </div>
+
+        <div class="moments__list" data-moments>
+          <button class="moment moment--balada is-open" type="button" aria-expanded="true">
+            <span class="moment__num">01</span>
+            <span class="moment__label">Balada</span>
+            <span class="moment__body">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l12-2v13M9 18a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM21 16a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM9 9l12-2" /></svg>
+              <span class="moment__text">O melhor energético que as baladas já viram. Gelada na mão e a noite inteira pela frente.</span>
+            </span>
+          </button>
+          <button class="moment moment--treino" type="button" aria-expanded="false">
+            <span class="moment__num">02</span>
+            <span class="moment__label">Treino</span>
+            <span class="moment__body">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7v10M9.5 5v14M14.5 5v14M18 7v10M9.5 12h5M3 10v4M21 10v4" /></svg>
+              <span class="moment__text">Corrida, quadra ou academia. Do aquecimento à última série, sem açúcar pesando.</span>
+            </span>
+          </button>
+          <button class="moment moment--pista" type="button" aria-expanded="false">
+            <span class="moment__num">03</span>
+            <span class="moment__label">Pista</span>
+            <span class="moment__body">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 22V3M4 4h15l-2.5 4.5L19 13H4M8 4v9M12 4v9M16 4v9M4 8.5h14" /></svg>
+              <span class="moment__text">Asfalto, adrenalina e motor ligado. Energia de alta performance pra quem acelera.</span>
+            </span>
+          </button>
+          <button class="moment moment--madrugada" type="button" aria-expanded="false">
+            <span class="moment__num">04</span>
+            <span class="moment__label">Madrugada</span>
+            <span class="moment__body">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5zM17 3v3M15.5 4.5h3" /></svg>
+              <span class="moment__text">Estudo, plantão, estrada ou game. Quando todo mundo dorme, o mamute acorda.</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         7. ARGUMENTO — foto em sangria total + frase de impacto
+         ======================================================== -->
+    <section class="section argument" aria-labelledby="argument-title">
+      <img class="argument__bg" src="assets/linha-cinematica.webp" alt="Quatro latas Mamute flutuando sobre rochas escuras com fumaça colorida"
+           width="1672" height="941" loading="lazy" />
+      <div class="container argument__copy" data-reveal>
+        <span class="eyebrow">Zero açúcar · 100% atitude e sabor</span>
+        <h2 class="display argument__title" id="argument-title">Não é só energia.<br><em>É força de mamute.</em></h2>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         8. REVENDA — chamada comercial + as 4 latas lado a lado
+         ======================================================== -->
+    <section class="section resale" id="revenda" aria-labelledby="resale-title">
+      <div class="container resale__grid">
+        <div class="resale__copy" data-reveal>
+          <span class="eyebrow">Para o seu negócio</span>
+          <h2 class="display resale__title" id="resale-title">Leve o bando<br>pro seu ponto</h2>
+          <p class="lead">Quatro sabores, lata de 269 ml e 473 ml, garrafas PET de 350 ml e 2 L. Uma marca com presença de prateleira e de balada.</p>
+          <ul class="resale__list">
+            <li>Mercados e conveniências</li>
+            <li>Academias e boxes</li>
+            <li>Bares, tabacarias e casas noturnas</li>
+            <li>Distribuidores regionais</li>
+          </ul>
+          <div class="resale__actions">
+            <a class="btn btn--accent" href="mailto:sac@mamuteenergydrink.com.br?subject=Quero%20revender%20Mamute">Quero revender</a>
+            <a class="btn btn--ghost" href="https://loja.mamuteenergydrink.com.br" target="_blank" rel="noopener">Loja oficial</a>
+          </div>
+        </div>
+        <div class="resale__lineup" aria-hidden="true" data-drop>
+          <img src="assets/lata-maca-verde.webp" alt="" data-render-flavor="maca-verde" loading="lazy" width="300" height="585" />
+          <img src="assets/lata-melancia.webp" alt="" data-render-flavor="melancia" loading="lazy" width="280" height="560" />
+          <img src="assets/lata-tropical.webp" alt="" data-render-flavor="tropical" loading="lazy" width="305" height="560" />
+          <img src="assets/lata-original.webp" alt="" data-render-flavor="original" loading="lazy" width="398" height="748" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         9. FAQ — título à esquerda, acordeão à direita
+         ======================================================== -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <h2 class="display faq__title" id="faq-title" data-reveal>Perguntas<br>frequentes</h2>
+
+        <div class="faq__list" data-faq>
+          <details class="faq__item" name="faq" open>
+            <summary>O que tem na Mamute?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Uma base com cafeína, taurina e vitaminas do complexo B, adoçada com sucralose e acesulfame K. Zero açúcar, zero carboidratos e zero gordura. A composição completa está na rotulagem de cada embalagem.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Quais sabores existem?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Original, Tropical, Melancia e Maçã Verde — todos zero açúcar.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Quais tamanhos estão disponíveis?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Latas de 269 ml e 473 ml e garrafas PET de 350 ml e 2 litros.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Onde comprar?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Na <a href="https://loja.mamuteenergydrink.com.br" target="_blank" rel="noopener">loja oficial</a> e nos pontos de venda parceiros. Para revender, fale com a gente em <a href="mailto:sac@mamuteenergydrink.com.br">sac@mamuteenergydrink.com.br</a>.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Todo mundo pode consumir?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Por conter cafeína, não é recomendado para crianças, gestantes, lactantes, idosos e pessoas com problemas de saúde sem orientação médica, nem o consumo junto com bebida alcoólica. Siga sempre as advertências da rotulagem.</p></div>
+          </details>
+          <details class="faq__item" name="faq">
+            <summary>Como conservar?<span class="faq__icon" aria-hidden="true"></span></summary>
+            <div class="faq__answer"><p>Antes de abrir, em local seco e fresco, longe da luz e do calor. Depois de aberta, na geladeira. Melhor ainda: bem gelada.</p></div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         10. LETREIRO — reage à velocidade do scroll
+         ======================================================== -->
+    <section class="section last-copy" aria-label="Entre pro bando">
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+          <span>Entre pro bando</span><span class="is-outline">Zero açúcar</span><span>100% atitude</span><span class="is-outline">Força de mamute</span>
+          <span>Entre pro bando</span><span class="is-outline">Zero açúcar</span><span>100% atitude</span><span class="is-outline">Força de mamute</span>
+        </div>
+      </div>
+      <p class="sr-only">Entre pro bando. Zero açúcar. 100% atitude. Força de mamute.</p>
+    </section>
+
+    <!-- ========================================================
+         11. ENTRE PRO BANDO — redes + novidades + rodapé
+         ======================================================== -->
+    <section class="section last" id="bando" aria-labelledby="news-title">
+      <div class="container last__inner">
+        <div class="newsletter" data-reveal>
+          <span class="eyebrow">@mamuteenergydrink · mais de 20 mil no bando</span>
+          <h2 class="display newsletter__title" id="news-title">Entre pro bando</h2>
+          <p class="lead">Lançamentos, eventos e promoções em primeira mão. Siga a Mamute e receba as novidades.</p>
+          <div class="bando__actions">
+            <a class="btn btn--accent" href="https://www.instagram.com/mamuteenergydrink/" target="_blank" rel="noopener">Seguir no Instagram</a>
+            <a class="btn btn--ghost" href="https://loja.mamuteenergydrink.com.br" target="_blank" rel="noopener">Comprar na loja oficial</a>
+          </div>
+
+          <form class="newsletter__form" data-newsletter novalidate>
+            <label class="field">
+              <span class="field__label link-mono">Seu e-mail</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="voce@email.com" />
+            </label>
+            <button class="btn btn--light" type="submit">Quero novidades</button>
+          </form>
+          <p class="newsletter__legal">Ao se inscrever, você aceita nossa <a href="#">política de privacidade</a>.</p>
+          <p class="newsletter__msg" role="status" data-newsletter-msg></p>
+        </div>
+      </div>
+
+      <footer class="footer container">
+        <span class="link-mono">Proposta conceitual de site · não oficial</span>
+        <nav class="footer__social" aria-label="Redes sociais">
+          <a class="link-mono" href="https://www.instagram.com/mamuteenergydrink/" target="_blank" rel="noopener">Instagram</a>
+          <a class="link-mono" href="https://x.com/mamuteenergy" target="_blank" rel="noopener">X</a>
+          <a class="link-mono" href="https://www.facebook.com/energeticomamute/" target="_blank" rel="noopener">Facebook</a>
+        </nav>
+        <a class="link-mono" href="mailto:sac@mamuteenergydrink.com.br">sac@mamuteenergydrink.com.br</a>
+      </footer>
+      <div class="footer__mark" aria-hidden="true" data-erupt><span>M</span><span>a</span><span>m</span><span>u</span><span>t</span><span>e</span></div>
+    </section>
+  </main>
+
+  <!-- app.js: lata 3D (Three.js) + rolagem suave e animações. Se o WebGL falhar, as fotos continuam. -->
+  <script src="app.js" defer></script>
+  <script src="script.js" defer></script>
+</body>
+</html>
