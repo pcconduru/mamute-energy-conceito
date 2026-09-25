@@ -3,11 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <title>Mamute Energy Drink – Energia de alta performance</title>
-  <meta name="description" content="Mamute Energy Drink: energia de alta performance para quem vive no limite. Zero açúcar, 100% atitude e sabor. Original, Tropical, Melancia e Maçã Verde." />
+  <title>Mamute Energy Drink | Energético zero açúcar – Original, Tropical, Melancia e Maçã Verde</title>
+  <meta name="description" content="Mamute Energy Drink: energético zero açúcar com cafeína, taurina e vitaminas do complexo B. Sabores Original, Tropical, Melancia e Maçã Verde em lata de 269 ml e 473 ml e PET de 350 ml e 2 L." />
   <meta name="theme-color" content="#000000" />
-  <!-- Proposta conceitual: fora dos buscadores até virar o site oficial -->
+  <!-- SEO — ao publicar no domínio oficial:
+       1. troque https://pcconduru.github.io/mamute-energy-conceito/ pelo domínio em todo o site (npm run pages refaz as páginas de sabor)
+       2. troque "noindex, nofollow" por "index, follow" (aqui e em tools/make-pages.js)
+       Enquanto for proposta conceitual, a página fica fora dos buscadores. -->
   <meta name="robots" content="noindex, nofollow" />
+  <link rel="canonical" href="https://pcconduru.github.io/mamute-energy-conceito/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:site_name" content="Mamute Energy Drink" />
+  <meta property="og:title" content="Mamute Energy Drink | Energia de alta performance" />
+  <meta property="og:description" content="Zero açúcar, 100% atitude e sabor. Conheça Original, Tropical, Melancia e Maçã Verde." />
+  <meta property="og:url" content="https://pcconduru.github.io/mamute-energy-conceito/" />
+  <meta property="og:image" content="https://pcconduru.github.io/mamute-energy-conceito/assets/og-mamute.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Quatro latas Mamute Energy Drink sobre rochas escuras" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@mamuteenergy" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://pcconduru.github.io/mamute-energy-conceito/#marca",
+        "name": "Mamute Energy Drink",
+        "url": "https://pcconduru.github.io/mamute-energy-conceito/",
+        "logo": "https://pcconduru.github.io/mamute-energy-conceito/assets/logo-mamute.png",
+        "email": "sac@mamuteenergydrink.com.br",
+        "slogan": "Energia de alta performance para quem vive no limite.",
+        "sameAs": [
+          "https://www.instagram.com/mamuteenergydrink/",
+          "https://x.com/mamuteenergy",
+          "https://www.facebook.com/energeticomamute/",
+          "https://loja.mamuteenergydrink.com.br"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pcconduru.github.io/mamute-energy-conceito/#site",
+        "url": "https://pcconduru.github.io/mamute-energy-conceito/",
+        "name": "Mamute Energy Drink",
+        "inLanguage": "pt-BR",
+        "publisher": {
+          "@id": "https://pcconduru.github.io/mamute-energy-conceito/#marca"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Sabores Mamute Energy Drink",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Mamute Original",
+            "url": "https://pcconduru.github.io/mamute-energy-conceito/sabores/original/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Mamute Tropical",
+            "url": "https://pcconduru.github.io/mamute-energy-conceito/sabores/tropical/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Mamute Melancia",
+            "url": "https://pcconduru.github.io/mamute-energy-conceito/sabores/melancia/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "name": "Mamute Maçã Verde",
+            "url": "https://pcconduru.github.io/mamute-energy-conceito/sabores/maca-verde/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
   <link rel="icon" type="image/svg+xml" href="assets/logo-mamute.svg" />
 
   <!-- Tipografia
@@ -15,13 +95,35 @@
        Libre Franklin 900 itálico -> substituto livre da "Franklin Gothic ATF" usada nos títulos -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Libre+Franklin:ital,wght@1,800;1,900&display=swap" rel="stylesheet" />
+  <!-- fontes sem bloquear a primeira pintura (entram assim que chegam) -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Libre+Franklin:ital,wght@1,800;1,900&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&family=Libre+Franklin:ital,wght@1,800;1,900&display=swap" rel="stylesheet" /></noscript>
 
-  <link rel="preload" as="image" href="assets/lata-original.webp" />
+  <link rel="preload" as="image" href="assets/render-original.webp" fetchpriority="high" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body data-flavor="original" class="is-loading">
+<body data-flavor="original">
+  <script>
+    // Loader e 3D "a caminho" só existem com JavaScript
+    document.body.classList.add('is-loading');
+    window.__mamute3d = 'pending';
+    // Lata 3D (Three.js, lata3d.js) só baixa depois que a página carregou:
+    // texto e imagem principal aparecem primeiro (bom para o Google e para celular)
+    // (espera o primeiro quadro pintado: nada de tela preta enquanto o 3D monta)
+    window.addEventListener('load', function () {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          setTimeout(function () {
+            var s = document.createElement('script');
+            s.src = 'lata3d.js';
+            s.onerror = function () { window.__mamute3d = 'failed'; document.dispatchEvent(new Event('mamute:3d-ready')); };
+            document.body.appendChild(s);
+          }, 0);
+        });
+      });
+    }, { once: true });
+  </script>
 
   <!-- Símbolo do mamute (vetorizado da arte da lata) — reutilizado com <use href="#mamute-mark"> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -119,10 +221,9 @@
          salta do chão com o impacto. Arraste a lata para girar.
          ======================================================== -->
     <section class="section hero" id="topo" data-hero>
-      <h1 class="sr-only">Mamute Energy Drink – Energia de alta performance para quem vive no limite</h1>
       <div class="hero__beam" aria-hidden="true"></div>
 
-      <p class="hero__claim">Energia de alta performance<br>para quem vive no limite.</p>
+      <h1 class="hero__claim"><span class="sr-only">Mamute Energy Drink: </span>Energia de alta performance<br>para quem vive no limite.</h1>
       <ul class="hero__facts" aria-label="Destaques">
         <li>473 ml</li>
         <li>Zero açúcar</li>
@@ -134,8 +235,8 @@
         <!-- Letreiro gigante atrás da lata: cada letra salta com a pisada (fx.js) -->
         <p class="hero__word" aria-hidden="true" data-hero-word><span>M</span><span>A</span><span>M</span><span>U</span><span>T</span><span>E</span></p>
         <!-- Foto = reserva sem WebGL · com 3D vira âncora invisível da lata -->
-        <img class="can can--hero" src="assets/lata-original.webp" alt="Lata Mamute Energy Drink sabor Original, 473 ml"
-             width="398" height="748" data-flavor-img
+        <img class="can can--hero" src="assets/render-original.webp" fetchpriority="high" alt="Lata Mamute Energy Drink sabor Original, 473 ml"
+             width="415" height="879" data-flavor-img
              data-can-anchor data-can-rest=".hero__floor" data-can-scale="0.9" data-can-tilt="0" data-can-lean="5" />
         <!-- Linha do chão (a lata fica em pé sobre ela; o 3D desenha o chão) -->
         <div class="hero__floor" aria-hidden="true"></div>
@@ -208,13 +309,14 @@
               <span class="flavor-panel__num">N°01 / 04</span>
               <h2 class="display flavor-panel__title" id="fp-original">Original</h2>
               <p>O clássico do bando. Intenso, marcante e zero açúcar — a lata preta que começou tudo.</p>
+              <a class="flavor-panel__more" href="sabores/original/">Conheça o Mamute Original <span aria-hidden="true">→</span></a>
             </div>
             <dl class="flavor-panel__specs">
               <div><dt>Perfil</dt><dd>Intenso · Clássico</dd></div>
               <div><dt>Combina com</dt><dd>Balada e treino pesado</dd></div>
               <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
             </dl>
-            <img class="flavor-panel__img" src="assets/lata-original.webp" alt="" width="398" height="748" loading="lazy" />
+            <img class="flavor-panel__img" src="assets/render-original.webp" alt="" width="415" height="879" loading="lazy" />
           </article>
 
           <!-- Tropical -->
@@ -233,13 +335,14 @@
               <span class="flavor-panel__num">N°02 / 04</span>
               <h2 class="display flavor-panel__title" id="fp-tropical">Tropical</h2>
               <p>Kiwi, maracujá e abacaxi num sabor de verão o ano inteiro. Doce na medida, refrescante até o último gole.</p>
+              <a class="flavor-panel__more" href="sabores/tropical/">Conheça o Mamute Tropical <span aria-hidden="true">→</span></a>
             </div>
             <dl class="flavor-panel__specs">
               <div><dt>Perfil</dt><dd>Solar · Refrescante</dd></div>
               <div><dt>Combina com</dt><dd>Praia, piscina e fim de tarde</dd></div>
               <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
             </dl>
-            <img class="flavor-panel__img" src="assets/lata-tropical.webp" alt="" width="305" height="560" loading="lazy" />
+            <img class="flavor-panel__img" src="assets/render-tropical.webp" alt="" width="415" height="879" loading="lazy" />
           </article>
 
           <!-- Melancia -->
@@ -255,13 +358,14 @@
               <span class="flavor-panel__num">N°03 / 04</span>
               <h2 class="display flavor-panel__title" id="fp-melancia">Melancia</h2>
               <p>Suculenta e gelada. Melancia madura que refresca desde o primeiro gole — leve, fácil de gostar e zero açúcar.</p>
+              <a class="flavor-panel__more" href="sabores/melancia/">Conheça o Mamute Melancia <span aria-hidden="true">→</span></a>
             </div>
             <dl class="flavor-panel__specs">
               <div><dt>Perfil</dt><dd>Suculenta · Leve</dd></div>
               <div><dt>Combina com</dt><dd>Verão inteiro</dd></div>
               <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
             </dl>
-            <img class="flavor-panel__img" src="assets/lata-melancia.webp" alt="" width="280" height="560" loading="lazy" />
+            <img class="flavor-panel__img" src="assets/render-melancia.webp" alt="" width="415" height="879" loading="lazy" />
           </article>
 
           <!-- Maçã Verde -->
@@ -277,13 +381,14 @@
               <span class="flavor-panel__num">N°04 / 04</span>
               <h2 class="display flavor-panel__title" id="fp-maca">Maçã Verde</h2>
               <p>Ácida na medida, crocante no paladar. Uma explosão verde que desperta na hora.</p>
+              <a class="flavor-panel__more" href="sabores/maca-verde/">Conheça o Mamute Maçã Verde <span aria-hidden="true">→</span></a>
             </div>
             <dl class="flavor-panel__specs">
               <div><dt>Perfil</dt><dd>Ácida · Vibrante</dd></div>
               <div><dt>Combina com</dt><dd>Madrugada de estudo</dd></div>
               <div><dt>Lata</dt><dd>473 ml · Zero açúcar</dd></div>
             </dl>
-            <img class="flavor-panel__img" src="assets/lata-maca-verde.webp" alt="" width="300" height="585" loading="lazy" />
+            <img class="flavor-panel__img" src="assets/render-maca-verde.webp" alt="" width="415" height="879" loading="lazy" />
           </article>
         </div>
 
@@ -482,10 +587,10 @@
           </div>
         </div>
         <div class="resale__lineup" aria-hidden="true" data-drop>
-          <img src="assets/lata-maca-verde.webp" alt="" data-render-flavor="maca-verde" loading="lazy" width="300" height="585" />
-          <img src="assets/lata-melancia.webp" alt="" data-render-flavor="melancia" loading="lazy" width="280" height="560" />
-          <img src="assets/lata-tropical.webp" alt="" data-render-flavor="tropical" loading="lazy" width="305" height="560" />
-          <img src="assets/lata-original.webp" alt="" data-render-flavor="original" loading="lazy" width="398" height="748" />
+          <img src="assets/render-maca-verde.webp" alt="" data-render-flavor="maca-verde" loading="lazy" width="415" height="879" />
+          <img src="assets/render-melancia.webp" alt="" data-render-flavor="melancia" loading="lazy" width="415" height="879" />
+          <img src="assets/render-tropical.webp" alt="" data-render-flavor="tropical" loading="lazy" width="415" height="879" />
+          <img src="assets/render-original.webp" alt="" data-render-flavor="original" loading="lazy" width="415" height="879" />
         </div>
       </div>
     </section>
@@ -567,6 +672,12 @@
 
       <footer class="footer container">
         <span class="link-mono">Proposta conceitual de site · não oficial</span>
+        <nav class="footer__flavors" aria-label="Sabores">
+          <a class="link-mono" href="sabores/original/">Original</a>
+          <a class="link-mono" href="sabores/tropical/">Tropical</a>
+          <a class="link-mono" href="sabores/melancia/">Melancia</a>
+          <a class="link-mono" href="sabores/maca-verde/">Maçã Verde</a>
+        </nav>
         <nav class="footer__social" aria-label="Redes sociais">
           <a class="link-mono" href="https://www.instagram.com/mamuteenergydrink/" target="_blank" rel="noopener">Instagram</a>
           <a class="link-mono" href="https://x.com/mamuteenergy" target="_blank" rel="noopener">X</a>
@@ -578,7 +689,9 @@
     </section>
   </main>
 
-  <!-- app.js: lata 3D (Three.js) + rolagem suave e animações. Se o WebGL falhar, as fotos continuam. -->
+  <!-- app.js: rolagem suave e animações (30 KB)
+       lata3d.js: lata 3D (Three.js), carregada depois do load (ver o início do <body>). Se o WebGL falhar, as fotos continuam.
+       script.js: loader, troca de sabor, menu, FAQ -->
   <script src="app.js" defer></script>
   <script src="script.js" defer></script>
 </body>

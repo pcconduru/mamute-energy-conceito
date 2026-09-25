@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pcconduru.github.io/mamute-energy-conceito/sitemap.xml

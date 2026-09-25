@@ -22,31 +22,34 @@
       name: 'Original',
       tagline: 'O clássico do bando.',
       desc: 'O clássico do bando. Sabor intenso e marcante para quem não desacelera.',
-      img: 'assets/lata-original.webp',
+      img: 'assets/render-original.webp',
     },
     'tropical': {
       name: 'Tropical',
       tagline: 'Kiwi, maracujá e abacaxi.',
       desc: 'Kiwi, maracujá e abacaxi num sabor de verão o ano inteiro. Doce na medida, refrescante até o fim.',
-      img: 'assets/lata-tropical.webp',
+      img: 'assets/render-tropical.webp',
     },
     'melancia': {
       name: 'Melancia',
       tagline: 'Suculenta e gelada.',
       desc: 'Refrescante do começo ao fim. Sabor de melancia madura, leve e fácil de gostar.',
-      img: 'assets/lata-melancia.webp',
+      img: 'assets/render-melancia.webp',
     },
     'maca-verde': {
       name: 'Maçã Verde',
       tagline: 'Ácida na medida.',
       desc: 'Crocante no paladar. Maçã verde vibrante com aquele toque ácido que desperta.',
-      img: 'assets/lata-maca-verde.webp',
+      img: 'assets/render-maca-verde.webp',
     },
   };
   const FLAVOR_KEYS = Object.keys(FLAVORS);
 
-  // Pré-carrega as latas para a troca ser instantânea
-  FLAVOR_KEYS.forEach((key) => { const img = new Image(); img.src = FLAVORS[key].img; });
+  // Sem 3D (WebGL indisponível): pré-carrega as fotos para a troca ser instantânea
+  document.addEventListener('mamute:3d-ready', () => {
+    if (window.__mamute3d !== 'failed') return;
+    FLAVOR_KEYS.forEach((key) => { const img = new Image(); img.src = FLAVORS[key].img; });
+  });
 
   /* ------------------------------------------------------------------------
      1. LOADER — conta de 0 a 100% e libera a página
@@ -85,8 +88,8 @@
   const checkReady = () => { if (windowLoaded && threeReady()) pageLoaded = true; };
   window.addEventListener('load', () => { windowLoaded = true; checkReady(); });
   document.addEventListener('mamute:3d-ready', checkReady);
-  // Segurança: nunca prende o usuário no loader por mais de 6s
-  setTimeout(() => { pageLoaded = true; }, 6000);
+  // Segurança: o loader nunca passa de 2,5 s (o 3D, se atrasar, entra depois)
+  setTimeout(() => { pageLoaded = true; }, 2500);
   prefersReducedMotion ? body.classList.remove('is-loading') : requestAnimationFrame(tickLoader);
 
   /* ------------------------------------------------------------------------
