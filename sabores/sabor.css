@@ -183,6 +183,10 @@ h1 em { display: block; font-style: italic; color: var(--accent); }
   .others strong { font-size: .95rem; }
   .others span { display: none; }
   .foot { justify-content: center; text-align: center; }
+  /* respiro nos títulos e entre os blocos */
+  .hero h1 { line-height: .95; }
+  .block h2 { line-height: 1.02; }
+  .block--split { gap: 2.8rem; }
 }
 @media (max-width: 479px) {
   .facts { grid-template-columns: 1fr; }

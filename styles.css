@@ -1370,12 +1370,75 @@ body.on-light .hud__energy-bar { background: rgba(0, 0, 0, .15); }
 
   .newsletter__form { flex-direction: column; align-items: stretch; }
   .newsletter__form .btn { width: 100%; }
+
+  .hero__claim { top: calc(var(--nav-h) + 1.4rem + 15.6vw + 1.2rem); font-size: .92rem; line-height: 1.22; }
+  /* a lata cabe no espaço entre a frase e o chão (em telas mais baixas ela não cobre a frase) */
+  .can--hero { height: clamp(220px, calc(100svh - var(--floor-b) - var(--nav-h) - 15.6vw - 6.2rem), 440px); }
+}
+
+/* Celular: mais respiro entre linhas e entre blocos de texto ---------------- */
+@media (max-width: 767px) {
+  /* títulos grandes: as linhas não encostam mais uma na outra */
+  .display { line-height: .98; letter-spacing: -.01em; }
+  .eyebrow { margin-bottom: 1rem; }
+  .lead { line-height: 1.6; }
+
+  /* menu fixo: faixa escura por trás, o texto que passa por baixo não encosta em MENU / COMPRAR */
+  .navbar::before {
+    inset: 0 0 -1.75rem;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .94) 0%, rgba(0, 0, 0, .86) 60%, transparent 100%);
+  }
+
+  /* manifesto: frase um pouco menor e mais aberta; a lata fica abaixo, sem cobrir o texto */
+  .manifesto__inner { gap: 2rem; }
+  .manifesto__text { font-size: clamp(1.35rem, 6.1vw, 1.9rem); line-height: 1.16; letter-spacing: -.005em; }
+  .manifesto__slot { height: 30vh; }
+
+  /* sabores */
+  .flavor-panel__num { margin-bottom: .8rem; }
+  .flavor-panel__title { margin-bottom: 1rem; }
+  .flavor-panel__copy p { line-height: 1.58; }
+  .flavor-panel__more { margin-top: 1.2rem; }
+  .flavors__dots { gap: 1.1rem; font-size: .62rem; bottom: 1.7rem; }
+
+  /* por dentro da lata: lata um pouco menor e mais baixa, sem cobrir o título */
+  .inside__slot { top: 52%; height: 38vh; }
+  .spot { gap: .55rem; padding: 1.1rem 1.25rem 1.2rem; }
+  .spot__title { line-height: 1.05; }
+
+  /* tamanhos */
+  .sizes__title { margin-bottom: 1.2rem; }
+  .sizes__list { row-gap: 3.5rem; }
+
+  /* momentos: no celular os 4 cartões ficam abertos e compactos (antes sobrava cartão vazio) */
+  .moments__list { gap: .9rem; }
+  .moment, .moment.is-open {
+    min-height: 0; flex: none; filter: none;
+    justify-content: flex-start; gap: .9rem;
+    padding: 1.4rem 1.35rem 1.6rem;
+  }
+  .moment::after { opacity: 1; }
+  .moment__label, .moment.is-open .moment__label { font-size: 2.3rem; line-height: 1; }
+  .moment__body, .moment.is-open .moment__body { opacity: 1; transform: none; gap: .85rem; }
+  .moment__body svg { width: 2.6rem; }
+  .moment__text { font-size: 1rem; line-height: 1.55; }
+
+  /* revenda */
+  .resale__title { margin-bottom: 1.25rem; }
+  .resale__list { gap: 1rem; margin: 1.9rem 0 2.2rem; }
+
+  /* newsletter e rodapé */
+  .newsletter { gap: 1.3rem; }
+  .footer { flex-direction: column; gap: 1.3rem; }
+  .footer__flavors { display: grid; grid-template-columns: repeat(2, auto); justify-content: center; gap: .9rem 2.2rem; }
+  .footer__social { gap: 1.6rem; }
 }
 
 
 /* Celular baixo (ex.: iPhone SE): a lata encosta no letreiro, a frase sai */
 @media (max-width: 479px) and (max-height: 700px) {
   .hero__claim { display: none; }
+  .can--hero { height: clamp(240px, 50svh, 440px); }
 }
 
 
